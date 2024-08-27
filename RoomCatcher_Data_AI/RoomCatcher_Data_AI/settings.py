@@ -156,7 +156,8 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3001',  # React 개발 서버의 URL
+    'http://localhost:3001',
+    'http://localhost:3000'# React 개발 서버의 URL
 ]
 CORS_ALLOW_METHODS = ['GET', 'POST', 'OPTIONS']  # 허용할 메소드
 CORS_ALLOW_CREDENTIALS = True  # 쿠키를 주고받을 수 있도록 허용
