@@ -40,7 +40,7 @@ SECRET_KEY = get_secret("SECRET_KEY",secrets)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -108,9 +108,8 @@ WSGI_APPLICATION = "RoomCatcher_Data_AI.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "room_lists.db",
-    }
+        "ENGINE": "django.db.backends.mysql"
+        }
 }
 
 
@@ -156,8 +155,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3001',
-    'http://localhost:3000'# React 개발 서버의 URL
+    '*'
 ]
 CORS_ALLOW_METHODS = ['GET', 'POST', 'OPTIONS']  # 허용할 메소드
 CORS_ALLOW_CREDENTIALS = True  # 쿠키를 주고받을 수 있도록 허용
